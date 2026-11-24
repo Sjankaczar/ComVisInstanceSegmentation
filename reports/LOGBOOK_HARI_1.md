@@ -14,8 +14,8 @@ jujur, saya pisahkan:
 | Bagian | Dasar penempatan |
 |---|---|
 | Eksplorasi data | **Terverifikasi.** Dataset diunduh 12 Nov 19:39; berkas log analisis EDA bertanggal 12 Nov 21:49 |
-| Pemilihan model | **Rekonstruksi.** Tercatat di `AGENT.md` §4, tetapi berkas itu dokumen hidup yang terakhir diubah 24 Nov. Penempatan di hari 1 berdasarkan ingatan pengerjaan, bukan timestamp |
-| Hipotesis awal | **Rekonstruksi.** Sama seperti di atas — `AGENT.md` §9, tanpa timestamp sendiri |
+| Pemilihan model | **Rekonstruksi.** Tercatat di catatan kerja proyek, tetapi berkas itu dokumen hidup yang terakhir diubah 24 Nov. Penempatan di hari 1 berdasarkan ingatan pengerjaan, bukan timestamp |
+| Hipotesis awal | **Rekonstruksi.** Sama seperti di atas, tanpa timestamp sendiri |
 
 Jam dan urutan menit tidak bisa direkonstruksi dan tidak saya karang. Yang bisa
 dipertanggungjawabkan adalah isi keputusannya, bukan detik keputusannya.

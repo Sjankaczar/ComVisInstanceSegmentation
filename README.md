@@ -2,14 +2,25 @@
 
 Segmentasi instance pada lingkungan indoor — tugas besar Computer Vision.
 
-Repo ini berisi pekerjaan hari pertama: audit dataset, pemilihan komposisi
-model, dan hipotesis yang akan diuji. Tahap berikutnya ditambahkan menyusul.
+Repo ini berisi pekerjaan hari pertama dan kedua: audit dataset, pemilihan
+komposisi model, hipotesis, preprocessing, dan hasil training awal.
 
 ```
-notebooks/01_eda.ipynb    analisis bereksekusi, output tertanam
-reports/LOGBOOK.md        logbook: EDA, pemilihan model, hipotesis
-docs/                     keterangan dataset
+notebooks/01_eda.ipynb         analisis EDA bereksekusi, output tertanam
+reports/LOGBOOK_HARI_1.md       hari 1: EDA, pemilihan model, hipotesis
+reports/LOGBOOK_HARI_2.md      hari 2: preprocessing, fold, pilot, training, skor
+data/processed/categories.json 70 kategori final + flag stuff/things
+splits/folds.json              5-fold stratified (seed 42)
+artifacts/csv_*.csv            results.csv per run, sumber semua angka mAP
+scripts/preprocess.py          dataset mentah -> dataset bersih
+scripts/make_folds.py          train+valid -> folds.json
+modal/train_yolo.py            skrip training di Modal.com
+docs/                          keterangan dataset
 ```
+
+Gambar dataset dan berkas turunan (`instances_*.json`, `manifest.csv`,
+`images_fixed/`) tidak disertakan. Semuanya dibangkitkan ulang oleh
+`python scripts/preprocess.py` setelah dataset diunduh.
 
 ## Dataset
 
