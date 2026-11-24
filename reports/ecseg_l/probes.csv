@@ -1,0 +1,5 @@
+percobaan,epoch,segm_mAP50_95,selisih_vs_baseline,catatan
+640x640 stretch (baseline ft36),6,0.3323,+0.0000,"acuan, sama-sama 6 epoch"
+480x640 native 4:3,6,0.3490,+0.0167,mengisolasi distorsi aspek
+544x736 native,6,0.3300,-0.0023,"piksel ~0,98x baseline"
+640x640 tanpa mosaic/mixup,6,0.3130,-0.0193,augmentasi dimatikan

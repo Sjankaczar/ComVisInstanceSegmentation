@@ -1,0 +1,12 @@
+percobaan,segm_mAP50_95,selisih_vs_baseline
+baseline,0.4395,+0.0000
+thr_global_0.05,0.4378,-0.0017
+thr_global_0.10,0.4320,-0.0075
+thr_global_0.20,0.4217,-0.0179
+thr_perkelas_F1,0.3618,-0.0778
+thr=+0.0 nms=None,0.4395,+0.0000
+thr=-0.5 nms=None,0.4390,-0.0005
+thr=+0.5 nms=None,0.4362,-0.0033
+thr=-1.0 nms=None,0.4363,-0.0032
+thr=+0.0 nms=0.6,0.4350,-0.0045
+thr=-0.5 nms=0.6,0.4347,-0.0048

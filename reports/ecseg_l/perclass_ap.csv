@@ -1,0 +1,25 @@
+class,AP_segm
+spoon,0.158
+light,0.166
+plate,0.194
+paper,0.196
+cabinet-merged,0.240
+toy,0.248
+blanket,0.266
+bowl,0.276
+book,0.330
+table-merged,0.336
+stove-merged,0.356
+cup,0.357
+bed,0.456
+food-other-merged,0.541
+couch,0.573
+chair,0.606
+pillow,0.607
+plug,0.614
+bottle,0.629
+potted plant,0.647
+pan,0.660
+box,0.673
+person,0.686
+fire-extinguisher,0.734

@@ -1,0 +1,57 @@
+__include__: [
+  '../ecdet/ecdet_l.yml',
+  '../dataset/custom24.yml',
+  'ecseg.yml',
+]
+
+output_dir: './outputs/ecseg_l_ft36'
+
+ViTAdapter:
+  name: ecseg_vits
+  weights_path: ecvits/ecseg_vits.pth
+
+eval_spatial_size: [640, 640]
+
+epochs: 36
+warmup_iter: 500
+lr_gamma: 0.5
+sync_bn: False
+print_freq: 100
+checkpoint_freq: 5
+
+optimizer:
+  type: AdamW
+  params:
+    -
+      params: '^(?=.*.backbone)(?!.*(?:norm|bn|bias)).*$'
+      lr: 0.0000025
+    -
+      params: '^(?=.*.backbone)(?=.*(?:norm|bn|bias)).*$'
+      lr: 0.0000025
+      weight_decay: 0.
+    -
+      params: '^(?!.*\.backbone)(?=.*(?:norm|bn|bias)).*$'
+      weight_decay: 0.
+  lr: 0.0005
+  betas: [0.9, 0.999]
+  weight_decay: 0.000125
+
+train_dataloader:
+  total_batch_size: 2
+  num_workers: 0
+  dataset:
+    transforms:
+      mosaic_epoch: 17
+      mosaic_prob: 1.0
+      stop_epoch: 34
+  collate_fn:
+    mixup_prob: 1.0
+    mixup_epoch: 17
+
+val_dataloader:
+  total_batch_size: 4
+  num_workers: 0
+
+early_stop_patience: 10
+early_stop_min_delta: 0.0005
+early_stop_min_epochs: 15

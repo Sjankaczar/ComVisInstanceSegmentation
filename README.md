@@ -2,13 +2,15 @@
 
 Segmentasi instance pada lingkungan indoor — tugas besar Computer Vision.
 
-Repo ini berisi pekerjaan hari pertama dan kedua: audit dataset, pemilihan
-komposisi model, hipotesis, preprocessing, dan hasil training awal.
+Repo ini berisi pekerjaan hari pertama sampai ketiga: audit dataset, pemilihan
+komposisi model, hipotesis, preprocessing, training awal, dan fine-tune ECSeg-L.
 
 ```
 notebooks/01_eda.ipynb         analisis EDA bereksekusi, output tertanam
-reports/LOGBOOK_HARI_1.md       hari 1: EDA, pemilihan model, hipotesis
+reports/LOGBOOK_HARI_1.md      hari 1: EDA, pemilihan model, hipotesis
 reports/LOGBOOK_HARI_2.md      hari 2: preprocessing, fold, pilot, training, skor
+reports/LOGBOOK_HARI_3.md      hari 3: ECSeg-L 36 epoch + 8 eksperimen
+reports/ecseg_l/               kurva, AP per kelas, ablasi, matriks konfusi, config
 data/processed/categories.json 70 kategori final + flag stuff/things
 splits/folds.json              5-fold stratified (seed 42)
 artifacts/csv_*.csv            results.csv per run, sumber semua angka mAP
