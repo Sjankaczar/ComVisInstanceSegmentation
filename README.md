@@ -11,7 +11,6 @@ Proyek segmentasi instance untuk lingkungan indoor menggunakan Panoptic Indoor S
 - `eda.ipynb` — pemeriksaan distribusi dan integritas dataset sumber.
 - `reports/own_test_eval/` — 40 foto test set sendiri, metadata EXIF, hasil evaluasi, grafik, dan panel kegagalan.
 - `reports/training_evidence/` — log, konfigurasi, metrik per epoch, dan bukti training ECSeg-L, Swin-L, serta EVA.
-- `local_runs/` — log, konfigurasi, metrik, dan checkpoint YOLO26m pretrained serta scratch.
 - `reports/figures/` — gambar dan grafik yang dirujuk oleh laporan.
 - `scripts/`, `modal/`, `splits/`, dan `data/processed/` — skrip preprocessing/training, konfigurasi Modal, definisi fold, serta kategori dataset.
 
