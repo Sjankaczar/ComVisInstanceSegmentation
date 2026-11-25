@@ -1,0 +1,63 @@
+__include__: [
+  '../ecdet/ecdet_l.yml',
+  '../dataset/custom35.yml',
+  'ecseg.yml',
+]
+
+output_dir: './outputs/ecseg_l_k35_ws'
+
+ViTAdapter:
+  name: ecseg_vits
+  weights_path: ecvits/ecseg_vits.pth
+
+eval_spatial_size: [640, 640]
+
+# Disamakan dengan run 24 kelas yang mencapai 0,4395 (ecseg_l_ft36.yml),
+# supaya perbandingan apple-to-apple dan waktu tempuh sebanding (~3,3 jam).
+epochs: 36
+warmup_iter: 500
+lr_gamma: 0.5
+sync_bn: False
+print_freq: 100
+# Tidak pernah tercapai dalam 36 epoch -> hanya best.pth + last.pth (~1,03 GB).
+# Disk C: sisa ~6,2 GB; checkpoint_freq 5 seperti run lama akan makan ~4,1 GB.
+checkpoint_freq: 100
+
+optimizer:
+  type: AdamW
+  params:
+    -
+      params: '^(?=.*.backbone)(?!.*(?:norm|bn|bias)).*$'
+      lr: 0.0000025
+    -
+      params: '^(?=.*.backbone)(?=.*(?:norm|bn|bias)).*$'
+      lr: 0.0000025
+      weight_decay: 0.
+    -
+      params: '^(?!.*\.backbone)(?=.*(?:norm|bn|bias)).*$'
+      weight_decay: 0.
+  lr: 0.0005
+  betas: [0.9, 0.999]
+  weight_decay: 0.000125
+
+train_dataloader:
+  total_batch_size: 2
+  num_workers: 0
+  dataset:
+    transforms:
+      mosaic_epoch: 17
+      mosaic_prob: 1.0
+      stop_epoch: 34
+  collate_fn:
+    mixup_prob: 1.0
+    mixup_epoch: 17
+
+val_dataloader:
+  total_batch_size: 4
+  num_workers: 0
+
+# Early stopping (port di engine/solver/ec_solver.py, lihat §8.4 rencana).
+# Nilai disamakan dengan run 24 kelas: itulah yang menghasilkan puncak ep32.
+early_stop_patience: 10
+early_stop_min_delta: 0.0005
+early_stop_min_epochs: 15

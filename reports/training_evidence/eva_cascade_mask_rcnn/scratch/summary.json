@@ -1,0 +1,21 @@
+{
+  "tag": "f0_scratch20",
+  "fold": 0,
+  "epochs_done": 20,
+  "epochs_target": 20,
+  "best_AP": 0.016784,
+  "best_epoch": 20,
+  "peak_gb": 14.9,
+  "total_sec": 2636.0,
+  "s_per_epoch": 131.8,
+  "usd_total": 1.5135,
+  "early_stopped": false,
+  "params_M": 365.6,
+  "num_classes": 35,
+  "imgsz": 640,
+  "pretrained": false,
+  "seed": 0,
+  "layer_decay": 1.0,
+  "lr": 0.0002,
+  "batch": 2
+}

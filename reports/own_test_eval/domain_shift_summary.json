@@ -1,0 +1,82 @@
+{
+  "yolo26m_pretrained": {
+    "mask_AP50_95": {
+      "own_test": 0.3691913515780394,
+      "test_asli": 0.12847605874131215,
+      "delta_own_minus_asli": 0.24071529283672724,
+      "relative_drop_pct": 65.200685716996
+    },
+    "mask_AP50": {
+      "own_test": 0.5242706631827008,
+      "test_asli": 0.22846013029784112,
+      "delta_own_minus_asli": 0.29581053288485964,
+      "relative_drop_pct": 56.4232473144838
+    },
+    "mask_AP75": {
+      "own_test": 0.44086593084734815,
+      "test_asli": 0.12139621999893901,
+      "delta_own_minus_asli": 0.31946971084840914,
+      "relative_drop_pct": 72.46414124910618
+    }
+  },
+  "yolo26m_scratch": {
+    "mask_AP50_95": {
+      "own_test": 0.10418714840938981,
+      "test_asli": 0.010991926238794051,
+      "delta_own_minus_asli": 0.09319522217059575,
+      "relative_drop_pct": 89.44982523602363
+    },
+    "mask_AP50": {
+      "own_test": 0.16442311982608038,
+      "test_asli": 0.021476561417923118,
+      "delta_own_minus_asli": 0.14294655840815726,
+      "relative_drop_pct": 86.93823506047076
+    },
+    "mask_AP75": {
+      "own_test": 0.11626308827624618,
+      "test_asli": 0.009610344452675777,
+      "delta_own_minus_asli": 0.1066527438235704,
+      "relative_drop_pct": 91.73396768040327
+    }
+  },
+  "ecseg_l_pretrained": {
+    "mask_AP50_95": {
+      "own_test": 0.489,
+      "test_asli": 0.259,
+      "delta_own_minus_asli": 0.22999999999999998,
+      "relative_drop_pct": 47.034764826175866
+    },
+    "mask_AP50": {
+      "own_test": 0.67,
+      "test_asli": 0.402,
+      "delta_own_minus_asli": 0.268,
+      "relative_drop_pct": 40.0
+    },
+    "mask_AP75": {
+      "own_test": 0.537,
+      "test_asli": 0.262,
+      "delta_own_minus_asli": 0.275,
+      "relative_drop_pct": 51.21042830540037
+    }
+  },
+  "ecseg_l_scratch": {
+    "mask_AP50_95": {
+      "own_test": 0.003,
+      "test_asli": 0.0,
+      "delta_own_minus_asli": 0.003,
+      "relative_drop_pct": 100.0
+    },
+    "mask_AP50": {
+      "own_test": 0.007,
+      "test_asli": 0.0,
+      "delta_own_minus_asli": 0.007,
+      "relative_drop_pct": 100.0
+    },
+    "mask_AP75": {
+      "own_test": 0.0,
+      "test_asli": 0.0,
+      "delta_own_minus_asli": 0.0,
+      "relative_drop_pct": null
+    }
+  }
+}

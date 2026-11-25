@@ -1,0 +1,223 @@
+[22:41:17] fold 0: 440 train / 107 val, 35 kelas
+[22:41:17] 220 iter/epoch, 40 epoch
+[22:41:32] 365.6M param
+[22:41:32] optimizer: AdamW base_lr 2.00e-04, layer_decay 0.8, 25 grup backbone (blok terakhir 1.60e-04, patch_embed 7.56e-07), head 2.00e-04
+[22:41:34]   GRUP LOSS: {'rpn': 0.9709926694631577, 's0': 4.732520462246612, 's1': 2.309340459149098, 's2': 1.5551668551925104}
+[22:41:34]   GATE RPN lulus: semua parameter rpn_head punya gradien
+[22:41:57]   ep1 it50 loss 2.4347 gn 21.33 25s mem 14.2GB
+[22:42:21]   ep1 it100 loss 3.0771 gn 18.84 49s mem 14.4GB
+[22:42:45]   ep1 it150 loss 2.8630 gn 16.03 73s mem 14.5GB
+[22:43:08]   ep1 it200 loss 2.5518 gn 16.87 96s mem 14.5GB
+[22:43:36] EPOCH 1/40 loss 3.2689 AP -1.000000 (best -1.000000 @ep-1) 106s $0.0607
+[22:43:51]   ep2 it250 loss 3.0806 gn 16.35 14s mem 14.5GB
+[22:44:14]   ep2 it300 loss 3.3343 gn 17.71 37s mem 14.5GB
+[22:44:38]   ep2 it350 loss 3.0194 gn 21.31 62s mem 14.5GB
+[22:45:02]   ep2 it400 loss 2.7595 gn 34.44 85s mem 14.5GB
+[22:45:42] EPOCH 2/40 loss 2.7519 AP -1.000000 (best -1.000000 @ep-1) 104s $0.1312
+[22:45:47]   ep3 it450 loss 4.0344 gn 11.40 5s mem 14.7GB
+[22:46:10]   ep3 it500 loss 2.4727 gn 7.01 29s mem 14.7GB
+[22:46:34]   ep3 it550 loss 2.2087 gn 6.08 52s mem 14.7GB
+[22:46:57]   ep3 it600 loss 1.5465 gn 42.06 75s mem 14.7GB
+[22:47:21]   ep3 it650 loss 1.2782 gn 6.65 99s mem 14.7GB
+[22:47:43] EPOCH 3/40 loss 2.5506 AP -1.000000 (best -1.000000 @ep-1) 104s $0.2029
+[22:48:03]   ep4 it700 loss 2.6131 gn 11.50 19s mem 14.7GB
+[22:48:26]   ep4 it750 loss 1.5919 gn 4.67 43s mem 14.7GB
+[22:48:50]   ep4 it800 loss 3.7143 gn 24.26 66s mem 14.7GB
+[22:49:13]   ep4 it850 loss 2.8885 gn 6.76 90s mem 14.7GB
+[22:49:47] EPOCH 4/40 loss 2.3371 AP -1.000000 (best -1.000000 @ep-1) 104s $0.2732
+[22:49:57]   ep5 it900 loss 2.0133 gn 8.50 10s mem 14.8GB
+[22:50:20]   ep5 it950 loss 2.3606 gn 6.66 33s mem 14.8GB
+[22:50:44]   ep5 it1000 loss 1.9008 gn 5.97 57s mem 14.8GB
+[22:51:08]   ep5 it1050 loss 2.2756 gn 11.25 81s mem 14.8GB
+[22:51:32]   ep5 it1100 loss 2.7133 gn 7.62 105s mem 14.9GB
+[22:52:09] EPOCH 5/40 loss 2.1833 AP 0.058099 (best 0.058099 @ep5) 105s $0.3529
+[22:52:34]   ep6 it1150 loss 1.1601 gn 5.66 24s mem 14.9GB
+[22:52:57]   ep6 it1200 loss 2.4572 gn 7.26 48s mem 14.9GB
+[22:53:22]   ep6 it1250 loss 2.0426 gn 8.40 72s mem 14.9GB
+[22:53:46]   ep6 it1300 loss 1.4011 gn 5.17 96s mem 14.9GB
+[22:54:15] EPOCH 6/40 loss 2.0547 AP -1.000000 (best 0.058099 @ep5) 106s $0.4267
+[22:54:30]   ep7 it1350 loss 2.1591 gn 6.46 15s mem 15.0GB
+[22:54:54]   ep7 it1400 loss 2.1427 gn 5.36 38s mem 15.0GB
+[22:55:17]   ep7 it1450 loss 2.4151 gn 8.72 62s mem 15.1GB
+[22:55:41]   ep7 it1500 loss 1.5133 gn 13.08 86s mem 15.2GB
+[22:56:22] EPOCH 7/40 loss 1.9529 AP -1.000000 (best 0.058099 @ep5) 105s $0.4986
+[22:56:27]   ep8 it1550 loss 3.2997 gn 18.80 5s mem 15.2GB
+[22:56:51]   ep8 it1600 loss 1.3813 gn 5.15 30s mem 15.2GB
+[22:57:15]   ep8 it1650 loss 1.6486 gn 6.56 54s mem 15.2GB
+[22:57:39]   ep8 it1700 loss 0.8917 gn 6.94 78s mem 15.2GB
+[22:58:04]   ep8 it1750 loss 0.9050 gn 4.18 102s mem 15.2GB
+[22:58:29] EPOCH 8/40 loss 1.8472 AP -1.000000 (best 0.058099 @ep5) 107s $0.5722
+[22:58:49]   ep9 it1800 loss 2.0210 gn 12.36 20s mem 15.2GB
+[22:59:13]   ep9 it1850 loss 1.2212 gn 6.48 44s mem 15.2GB
+[22:59:37]   ep9 it1900 loss 2.4109 gn 8.57 68s mem 15.2GB
+[23:00:02]   ep9 it1950 loss 2.2106 gn 7.92 93s mem 15.2GB
+[23:00:36] EPOCH 9/40 loss 1.7610 AP -1.000000 (best 0.058099 @ep5) 108s $0.6462
+[23:00:46]   ep10 it2000 loss 1.5445 gn 8.72 10s mem 15.2GB
+[23:01:10]   ep10 it2050 loss 1.6198 gn 6.94 35s mem 15.3GB
+[23:01:35]   ep10 it2100 loss 1.3942 gn 6.76 59s mem 15.3GB
+[23:01:59]   ep10 it2150 loss 1.7802 gn 12.53 83s mem 15.3GB
+[23:02:23]   ep10 it2200 loss 2.3598 gn 19.06 108s mem 15.3GB
+[23:02:59] EPOCH 10/40 loss 1.6534 AP 0.200926 (best 0.200926 @ep10) 108s $0.7262
+[23:03:23]   ep11 it2250 loss 0.8412 gn 6.90 25s mem 15.3GB
+[23:03:48]   ep11 it2300 loss 1.9331 gn 10.21 49s mem 15.3GB
+[23:04:12]   ep11 it2350 loss 1.7284 gn 7.91 73s mem 15.3GB
+[23:04:36]   ep11 it2400 loss 0.8642 gn 6.15 98s mem 15.3GB
+[23:05:05] EPOCH 11/40 loss 1.5791 AP -1.000000 (best 0.200926 @ep10) 107s $0.8004
+[23:05:20]   ep12 it2450 loss 1.5480 gn 14.13 15s mem 15.3GB
+[23:05:45]   ep12 it2500 loss 1.9016 gn 13.40 40s mem 15.3GB
+[23:06:09]   ep12 it2550 loss 1.8966 gn 8.11 64s mem 15.3GB
+[23:06:34]   ep12 it2600 loss 1.2822 gn 13.83 89s mem 15.3GB
+[23:07:11] EPOCH 12/40 loss 1.4959 AP -1.000000 (best 0.200926 @ep10) 109s $0.8738
+[23:07:16]   ep13 it2650 loss 2.2696 gn 10.36 5s mem 15.3GB
+[23:07:41]   ep13 it2700 loss 1.2179 gn 5.29 30s mem 15.3GB
+[23:08:06]   ep13 it2750 loss 1.1162 gn 6.43 55s mem 15.3GB
+[23:08:31]   ep13 it2800 loss 0.6737 gn 9.83 80s mem 15.3GB
+[23:08:56]   ep13 it2850 loss 0.6553 gn 6.59 105s mem 15.3GB
+[23:09:23] EPOCH 13/40 loss 1.4247 AP -1.000000 (best 0.200926 @ep10) 110s $0.9469
+[23:09:43]   ep14 it2900 loss 1.5446 gn 12.19 20s mem 15.3GB
+[23:10:09]   ep14 it2950 loss 0.7498 gn 8.46 46s mem 15.3GB
+[23:10:34]   ep14 it3000 loss 2.1020 gn 16.83 71s mem 15.3GB
+[23:10:58]   ep14 it3050 loss 1.7429 gn 9.34 96s mem 15.3GB
+[23:11:32] EPOCH 14/40 loss 1.3313 AP -1.000000 (best 0.200926 @ep10) 111s $1.0227
+[23:11:42]   ep15 it3100 loss 1.2529 gn 8.54 10s mem 15.3GB
+[23:12:07]   ep15 it3150 loss 1.3523 gn 8.24 35s mem 15.3GB
+[23:12:32]   ep15 it3200 loss 1.1482 gn 7.83 59s mem 15.3GB
+[23:12:57]   ep15 it3250 loss 1.3563 gn 14.03 84s mem 15.3GB
+[23:13:21]   ep15 it3300 loss 1.9465 gn 10.64 109s mem 15.3GB
+[23:14:07] EPOCH 15/40 loss 1.2719 AP 0.238444 (best 0.238444 @ep15) 109s $1.1041
+[23:14:33]   ep16 it3350 loss 0.8299 gn 12.30 25s mem 15.3GB
+[23:14:57]   ep16 it3400 loss 1.5633 gn 11.32 50s mem 15.3GB
+[23:15:22]   ep16 it3450 loss 1.3369 gn 8.29 75s mem 15.3GB
+[23:15:49]   ep16 it3500 loss 0.6286 gn 6.52 102s mem 15.3GB
+[23:16:18] EPOCH 16/40 loss 1.2198 AP -1.000000 (best 0.238444 @ep15) 112s $1.1870
+[23:16:33]   ep17 it3550 loss 1.1569 gn 9.69 15s mem 15.3GB
+[23:16:59]   ep17 it3600 loss 1.3787 gn 7.70 41s mem 15.3GB
+[23:17:23]   ep17 it3650 loss 1.7339 gn 13.66 65s mem 15.3GB
+[23:17:48]   ep17 it3700 loss 1.0679 gn 9.47 90s mem 15.3GB
+[23:18:36] EPOCH 17/40 loss 1.1618 AP -1.000000 (best 0.238444 @ep15) 111s $1.2615
+[23:18:42]   ep18 it3750 loss 1.9127 gn 45.52 5s mem 15.3GB
+[23:19:07]   ep18 it3800 loss 0.8444 gn 4.00 30s mem 15.3GB
+[23:19:31]   ep18 it3850 loss 0.8519 gn 8.39 55s mem 15.3GB
+[23:19:56]   ep18 it3900 loss 0.4290 gn 5.02 80s mem 15.3GB
+[23:20:21]   ep18 it3950 loss 0.3574 gn 5.02 105s mem 15.3GB
+[23:20:49] EPOCH 18/40 loss 1.0846 AP -1.000000 (best 0.238444 @ep15) 110s $1.3404
+[23:21:10]   ep19 it4000 loss 1.1999 gn 17.36 21s mem 15.3GB
+[23:21:35]   ep19 it4050 loss 0.5874 gn 7.62 46s mem 15.3GB
+[23:22:01]   ep19 it4100 loss 1.6470 gn 8.26 72s mem 15.3GB
+[23:22:26]   ep19 it4150 loss 1.4370 gn 12.02 97s mem 15.3GB
+[23:23:00] EPOCH 19/40 loss 1.0372 AP -1.000000 (best 0.238444 @ep15) 112s $1.4177
+[23:23:10]   ep20 it4200 loss 0.8953 gn 8.71 10s mem 15.3GB
+[23:23:35]   ep20 it4250 loss 1.1575 gn 8.90 35s mem 15.3GB
+[23:24:00]   ep20 it4300 loss 0.7401 gn 7.10 60s mem 15.3GB
+[23:24:25]   ep20 it4350 loss 0.9101 gn 7.04 85s mem 15.3GB
+[23:24:50]   ep20 it4400 loss 1.4110 gn 10.90 110s mem 15.3GB
+[23:25:26] EPOCH 20/40 loss 0.9920 AP 0.273385 (best 0.273385 @ep20) 111s $1.4989
+[23:25:51]   ep21 it4450 loss 0.5617 gn 7.40 25s mem 15.3GB
+[23:26:16]   ep21 it4500 loss 1.1201 gn 8.77 50s mem 15.3GB
+[23:26:42]   ep21 it4550 loss 1.1130 gn 9.99 76s mem 15.3GB
+[23:27:07]   ep21 it4600 loss 0.4288 gn 4.63 101s mem 15.3GB
+[23:27:38] EPOCH 21/40 loss 0.9453 AP -1.000000 (best 0.273385 @ep20) 111s $1.5760
+[23:27:53]   ep22 it4650 loss 0.8059 gn 7.05 15s mem 15.3GB
+[23:28:18]   ep22 it4700 loss 1.0608 gn 6.45 40s mem 15.3GB
+[23:28:43]   ep22 it4750 loss 1.3384 gn 24.63 65s mem 15.3GB
+[23:29:08]   ep22 it4800 loss 0.7810 gn 12.50 91s mem 15.3GB
+[23:29:47] EPOCH 22/40 loss 0.9020 AP -1.000000 (best 0.273385 @ep20) 111s $1.6515
+[23:29:53]   ep23 it4850 loss 1.6719 gn 10.65 5s mem 15.3GB
+[23:30:18]   ep23 it4900 loss 0.6834 gn 4.89 30s mem 15.3GB
+[23:30:42]   ep23 it4950 loss 0.6162 gn 7.03 55s mem 15.3GB
+[23:31:07]   ep23 it5000 loss 0.2529 gn 3.12 80s mem 15.3GB
+[23:31:33]   ep23 it5050 loss 0.2782 gn 3.03 105s mem 15.3GB
+[23:31:59] EPOCH 23/40 loss 0.8662 AP -1.000000 (best 0.273385 @ep20) 110s $1.7259
+[23:32:19]   ep24 it5100 loss 0.8393 gn 9.60 20s mem 15.3GB
+[23:32:44]   ep24 it5150 loss 0.3977 gn 4.68 45s mem 15.3GB
+[23:33:10]   ep24 it5200 loss 1.2191 gn 6.18 72s mem 15.3GB
+[23:33:36]   ep24 it5250 loss 1.0483 gn 7.57 97s mem 15.3GB
+[23:34:10] EPOCH 24/40 loss 0.8298 AP -1.000000 (best 0.273385 @ep20) 112s $1.8021
+[23:34:20]   ep25 it5300 loss 0.7095 gn 6.09 10s mem 15.3GB
+[23:34:46]   ep25 it5350 loss 0.8138 gn 6.15 36s mem 15.3GB
+[23:35:11]   ep25 it5400 loss 0.6560 gn 6.67 60s mem 15.3GB
+[23:35:36]   ep25 it5450 loss 0.7042 gn 5.72 86s mem 15.3GB
+[23:36:01]   ep25 it5500 loss 1.1606 gn 8.29 111s mem 15.3GB
+[23:36:37] EPOCH 25/40 loss 0.7907 AP 0.289888 (best 0.289888 @ep25) 111s $1.8841
+[23:37:03]   ep26 it5550 loss 0.4065 gn 6.18 26s mem 15.3GB
+[23:37:28]   ep26 it5600 loss 0.9483 gn 9.89 51s mem 15.3GB
+[23:37:53]   ep26 it5650 loss 1.0916 gn 22.49 76s mem 15.3GB
+[23:38:18]   ep26 it5700 loss 0.3178 gn 4.04 101s mem 15.3GB
+[23:38:46] EPOCH 26/40 loss 0.7584 AP -1.000000 (best 0.289888 @ep25) 111s $1.9615
+[23:39:02]   ep27 it5750 loss 0.5976 gn 7.33 15s mem 15.3GB
+[23:39:27]   ep27 it5800 loss 0.8666 gn 6.42 41s mem 15.3GB
+[23:39:52]   ep27 it5850 loss 0.7941 gn 7.95 66s mem 15.3GB
+[23:40:17]   ep27 it5900 loss 0.6191 gn 10.31 91s mem 15.3GB
+[23:40:58] EPOCH 27/40 loss 0.7313 AP -1.000000 (best 0.289888 @ep25) 111s $2.0357
+[23:41:04]   ep28 it5950 loss 1.3678 gn 8.00 5s mem 15.3GB
+[23:41:29]   ep28 it6000 loss 0.5511 gn 14.17 30s mem 15.3GB
+[23:41:54]   ep28 it6050 loss 0.4915 gn 5.94 56s mem 15.3GB
+[23:42:19]   ep28 it6100 loss 0.2935 gn 5.43 81s mem 15.3GB
+[23:42:44]   ep28 it6150 loss 0.2871 gn 6.30 106s mem 15.3GB
+[23:43:09] EPOCH 28/40 loss 0.6971 AP -1.000000 (best 0.289888 @ep25) 111s $2.1113
+[23:43:29]   ep29 it6200 loss 0.6441 gn 7.16 21s mem 15.3GB
+[23:43:55]   ep29 it6250 loss 0.3022 gn 2.92 46s mem 15.3GB
+[23:44:20]   ep29 it6300 loss 1.1656 gn 8.71 71s mem 15.3GB
+[23:44:45]   ep29 it6350 loss 0.9465 gn 8.17 97s mem 15.3GB
+[23:45:19] EPOCH 29/40 loss 0.6761 AP -1.000000 (best 0.289888 @ep25) 111s $2.1865
+[23:45:30]   ep30 it6400 loss 0.5867 gn 6.18 10s mem 15.3GB
+[23:45:55]   ep30 it6450 loss 0.7261 gn 5.84 35s mem 15.3GB
+[23:46:20]   ep30 it6500 loss 0.4639 gn 5.34 60s mem 15.3GB
+[23:46:45]   ep30 it6550 loss 0.5981 gn 5.87 85s mem 15.3GB
+[23:47:10]   ep30 it6600 loss 0.9617 gn 8.18 110s mem 15.3GB
+[23:47:45] EPOCH 30/40 loss 0.6561 AP 0.312223 (best 0.312223 @ep30) 110s $2.2679
+[23:48:11]   ep31 it6650 loss 0.3357 gn 4.16 26s mem 15.3GB
+[23:48:36]   ep31 it6700 loss 0.8366 gn 6.37 51s mem 15.3GB
+[23:49:01]   ep31 it6750 loss 0.6957 gn 7.02 76s mem 15.3GB
+[23:49:26]   ep31 it6800 loss 0.2870 gn 4.10 101s mem 15.3GB
+[23:49:56] EPOCH 31/40 loss 0.6305 AP -1.000000 (best 0.312223 @ep30) 110s $2.3448
+[23:50:11]   ep32 it6850 loss 0.5323 gn 6.87 15s mem 15.3GB
+[23:50:36]   ep32 it6900 loss 0.7004 gn 5.75 41s mem 15.3GB
+[23:51:01]   ep32 it6950 loss 0.7130 gn 9.06 66s mem 15.3GB
+[23:51:26]   ep32 it7000 loss 0.4807 gn 7.27 90s mem 15.3GB
+[23:52:06] EPOCH 32/40 loss 0.6072 AP -1.000000 (best 0.312223 @ep30) 110s $2.4196
+[23:52:12]   ep33 it7050 loss 1.1169 gn 9.98 5s mem 15.3GB
+[23:52:37]   ep33 it7100 loss 0.4224 gn 4.07 31s mem 15.3GB
+[23:53:02]   ep33 it7150 loss 0.3633 gn 3.56 56s mem 15.3GB
+[23:53:27]   ep33 it7200 loss 0.1667 gn 2.31 81s mem 15.3GB
+[23:53:52]   ep33 it7250 loss 0.1747 gn 1.82 106s mem 15.3GB
+[23:54:18] EPOCH 33/40 loss 0.6000 AP -1.000000 (best 0.312223 @ep30) 111s $2.4950
+[23:54:39]   ep34 it7300 loss 0.6231 gn 9.78 21s mem 15.3GB
+[23:55:04]   ep34 it7350 loss 0.3052 gn 4.90 46s mem 15.3GB
+[23:55:30]   ep34 it7400 loss 0.8985 gn 5.72 71s mem 15.3GB
+[23:55:55]   ep34 it7450 loss 0.8610 gn 6.67 96s mem 15.3GB
+[23:56:29] EPOCH 34/40 loss 0.5814 AP -1.000000 (best 0.312223 @ep30) 111s $2.5708
+[23:56:39]   ep35 it7500 loss 0.5060 gn 5.94 10s mem 15.3GB
+[23:57:04]   ep35 it7550 loss 0.5760 gn 5.57 36s mem 15.3GB
+[23:57:29]   ep35 it7600 loss 0.4613 gn 4.63 61s mem 15.3GB
+[23:57:55]   ep35 it7650 loss 0.5034 gn 3.90 86s mem 15.3GB
+[23:58:20]   ep35 it7700 loss 0.8947 gn 8.74 111s mem 15.3GB
+[23:58:55] EPOCH 35/40 loss 0.5719 AP 0.318269 (best 0.318269 @ep35) 111s $2.6527
+[23:59:20]   ep36 it7750 loss 0.2911 gn 4.21 25s mem 15.3GB
+[23:59:45]   ep36 it7800 loss 0.6452 gn 6.26 50s mem 15.3GB
+[00:00:10]   ep36 it7850 loss 0.5379 gn 5.13 75s mem 15.3GB
+[00:00:35]   ep36 it7900 loss 0.2452 gn 3.40 101s mem 15.3GB
+[00:01:08] EPOCH 36/40 loss 0.5648 AP -1.000000 (best 0.318269 @ep35) 110s $2.7292
+[00:01:23]   ep37 it7950 loss 0.5117 gn 8.00 16s mem 15.3GB
+[00:01:48]   ep37 it8000 loss 0.7024 gn 6.75 41s mem 15.3GB
+[00:02:13]   ep37 it8050 loss 0.6200 gn 5.47 66s mem 15.3GB
+[00:02:39]   ep37 it8100 loss 0.4322 gn 5.08 91s mem 15.3GB
+[00:03:22] EPOCH 37/40 loss 0.5666 AP -1.000000 (best 0.318269 @ep35) 111s $2.8059
+[00:03:27]   ep38 it8150 loss 1.0856 gn 9.09 5s mem 15.3GB
+[00:03:52]   ep38 it8200 loss 0.3837 gn 3.41 31s mem 15.3GB
+[00:04:19]   ep38 it8250 loss 0.3257 gn 2.86 58s mem 15.3GB
+[00:04:45]   ep38 it8300 loss 0.2180 gn 6.22 84s mem 15.3GB
+[00:05:10]   ep38 it8350 loss 0.2001 gn 3.24 109s mem 15.3GB
+[00:05:34] EPOCH 38/40 loss 0.5481 AP -1.000000 (best 0.318269 @ep35) 114s $2.8843
+[00:05:54]   ep39 it8400 loss 0.5353 gn 10.40 20s mem 15.3GB
+[00:06:19]   ep39 it8450 loss 0.2753 gn 6.21 45s mem 15.3GB
+[00:06:44]   ep39 it8500 loss 0.8671 gn 5.66 70s mem 15.3GB
+[00:07:09]   ep39 it8550 loss 0.9607 gn 10.88 96s mem 15.3GB
+[00:07:46] EPOCH 39/40 loss 0.5613 AP -1.000000 (best 0.318269 @ep35) 111s $2.9585
+[00:07:56]   ep40 it8600 loss 0.5316 gn 6.58 10s mem 15.3GB
+[00:08:21]   ep40 it8650 loss 0.5403 gn 4.68 35s mem 15.3GB
+[00:08:46]   ep40 it8700 loss 0.4557 gn 6.77 60s mem 15.3GB
+[00:09:10]   ep40 it8750 loss 0.5085 gn 4.07 85s mem 15.3GB
+[00:09:35]   ep40 it8800 loss 0.8627 gn 8.53 110s mem 15.3GB
+[00:10:10] EPOCH 40/40 loss 0.5547 AP 0.322801 (best 0.322801 @ep40) 110s $3.0404
+[00:10:15] SELESAI {"tag": "f0_rpnfix", "fold": 0, "epochs_done": 40, "epochs_target": 40, "best_AP": 0.322801, "best_epoch": 40, "peak_gb": 15.29, "total_sec": 5317.8, "s_per_epoch": 132.9, "usd_total": 3.0533, "early_stopped": false, "params_M": 365.6, "num_classes": 35, "imgsz": 640}

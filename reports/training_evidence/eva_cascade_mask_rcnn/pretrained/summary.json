@@ -1,0 +1,16 @@
+{
+  "tag": "f0_rpnfix",
+  "fold": 0,
+  "epochs_done": 40,
+  "epochs_target": 40,
+  "best_AP": 0.322801,
+  "best_epoch": 40,
+  "peak_gb": 15.29,
+  "total_sec": 5317.8,
+  "s_per_epoch": 132.9,
+  "usd_total": 3.0533,
+  "early_stopped": false,
+  "params_M": 365.6,
+  "num_classes": 35,
+  "imgsz": 640
+}

@@ -1,0 +1,79 @@
+__include__: [
+  '../ecdet/ecdet_l.yml',
+  '../dataset/custom35.yml',
+  'ecseg.yml',
+]
+
+output_dir: './outputs/ecseg_l_k35_scratch'
+
+# Scratch sejati: encoder + decoder acak. Tanpa `skip_load_backbone: True`,
+# ecvit.py:407 tetap memuat ecvits/ecseg_vits.pth walau `-t` tidak dipakai.
+# JANGAN kosongkan weights_path: ecvit.py:449-457 akan mengunduh bobot
+# pretrained dari URL bila file tidak ada, dan scratch jadi bohong tanpa error.
+ViTAdapter:
+  name: ecseg_vits
+  weights_path: ecvits/ecseg_vits.pth
+  skip_load_backbone: True
+
+eval_spatial_size: [640, 640]
+
+epochs: 30
+warmup_iter: 500
+lr_gamma: 0.5
+sync_bn: False
+print_freq: 100
+checkpoint_freq: 100
+
+# Backbone 2.5e-5 (10x config ws) = default from-scratch upstream
+# (ecdet.yml:38, ecseg_s, ecseg_m). Config ws memakai 2.5e-6, rasio 1:200
+# terhadap head; pada 6600 iterasi backbone nyaris tidak bergerak.
+optimizer:
+  type: AdamW
+  params:
+    -
+      params: '^(?=.*.backbone)(?!.*(?:norm|bn|bias)).*$'
+      lr: 0.000025
+    -
+      params: '^(?=.*.backbone)(?=.*(?:norm|bn|bias)).*$'
+      lr: 0.000025
+      weight_decay: 0.
+    -
+      params: '^(?!.*\.backbone)(?=.*(?:norm|bn|bias)).*$'
+      weight_decay: 0.
+  lr: 0.0005
+  betas: [0.9, 0.999]
+  weight_decay: 0.000125
+
+train_dataloader:
+  total_batch_size: 2
+  num_workers: 0
+  dataset:
+    transforms:
+      # 17/36 di config ws, diskalakan ke 15/30.
+      # mosaic_epoch DIPERTAHANKAN 15: ec_solver.py:34 memakainya sebagai
+      # flat_epochs LR; menyetel 0 akan menghapus fase flat, bukan mematikan
+      # mosaic. Yang mematikan mosaic adalah mosaic_prob (container.py:83).
+      # VRAM 8 GB mentok 7,9 GB lalu meluap ke RAM (shared 3,1 GB) dan epoch
+      # membengkak 4 -> 9 menit. Mosaic (4 gambar + cache 50) penyumbang
+      # terbesar memori CPU-side.
+      mosaic_epoch: 15
+      mosaic_prob: 0.0
+      # stop_epoch == epochs -> no_aug_epochs = 0. Dua alasan:
+      # 1) ec_solver.py:99 reload best.pth di epoch == stop_aug_epoch. Pada
+      #    scratch, best.pth bisa belum pernah ada (butuh AP > 0) sehingga
+      #    run mati FileNotFoundError; kalau ada pun isinya model nyaris acak.
+      # 2) epoch < stop_aug_epoch selalu benar -> last.pth ditulis tiap epoch.
+      stop_epoch: 30
+  collate_fn:
+    # Dimatikan: mixup men-deepcopy target + concat mask tiap batch
+    # (dataloader.py:122-130), menambah puncak memori di atas mosaic.
+    mixup_prob: 0.0
+    mixup_epoch: 15
+
+val_dataloader:
+  total_batch_size: 4
+  num_workers: 0
+
+early_stop_patience: 10
+early_stop_min_delta: 0.0005
+early_stop_min_epochs: 15
