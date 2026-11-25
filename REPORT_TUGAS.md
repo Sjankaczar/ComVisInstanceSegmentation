@@ -254,8 +254,8 @@ Artefak bukti run mencakup CSV metrik per epoch, log training, konfigurasi ECSeg
 
 | Model / arm | Lingkungan | Waktu training tercatat | Bukti/log utama |
 |---|---|---:|---|
-| YOLO26m pretrained | RTX 4060 Laptop 8 GB | 20,5 menit, 24 epoch | [results.csv](local_runs/k35_m_pf0/results.csv), [train.log](local_runs/k35_m_pf0/train.log), `args.yaml`, `metrics.json` |
-| YOLO26m scratch | RTX 4060 Laptop 8 GB | 44,9 menit run terpilih; 144 epoch kumulatif | [results.csv](local_runs/k35_m_sf0_c3/results.csv), [train.log](local_runs/k35_m_sf0_c3/train.log), `args.yaml`; warm restart berantai, bukan resume optimizer |
+| YOLO26m pretrained | RTX 4060 Laptop 8 GB | 20,5 menit, 24 epoch | [results.csv](reports/training_evidence/yolo26m/k35_m_pf0/results.csv), [train.log](reports/training_evidence/yolo26m/k35_m_pf0/train.log), `args.yaml` |
+| YOLO26m scratch | RTX 4060 Laptop 8 GB | 44,9 menit run terpilih; 144 epoch kumulatif | [results.csv](reports/training_evidence/yolo26m/k35_m_sf0_c3/results.csv), [train.log](reports/training_evidence/yolo26m/k35_m_sf0_c3/train.log), `args.yaml`; warm restart berantai, bukan resume optimizer |
 | ECSeg-L pretrained | RTX 4060 Laptop 8 GB | 2 jam 22 menit, 36 epoch termasuk evaluasi | [log JSON](reports/training_evidence/ecseg_l/pretrained/log.txt), [stdout](reports/training_evidence/ecseg_l/pretrained/stdout.log), config dan TensorBoard |
 | ECSeg-L scratch | RTX 4060 Laptop 8 GB | 1 jam 34 menit, 30 epoch dijadwalkan | [log JSON](reports/training_evidence/ecseg_l/scratch/log.txt), [stdout](reports/training_evidence/ecseg_l/scratch/stdout.log), config dan TensorBoard |
 | Swin-L + Mask2Former pretrained | Modal L40S | 75 epoch; durasi dinding perlu dirujuk ke log | [results.csv](reports/training_evidence/swin_l_mask2former/pretrained/results.csv), [log Modal](reports/training_evidence/swin_l_mask2former/pretrained/train.log), `metrics.json` |
@@ -290,7 +290,7 @@ Kasus paling jelas untuk dipaparkan adalah salah diagnosis kondisi redup: kesimp
 
 - Notebook training dan evaluasi yang ditempatkan di root repo: `Training Model.ipynb`, `Evaluasi Model.ipynb`.
 - Evaluasi dan domain shift lokal/modal: [domain_shift_summary.json](reports/own_test_eval/domain_shift_summary.json) dan [domain_shift_all_models.json](reports/own_test_eval/domain_shift_all_models.json).
-- Hasil YOLO 35 kelas dan detail protokol: tabel hasil di laporan ini, notebook training, serta berkas metrik di `local_runs/`.
+- Hasil YOLO 35 kelas dan detail protokol: tabel hasil di laporan ini, notebook training, serta berkas metrik di `reports/training_evidence/yolo26m/`.
 - Logbook keputusan dan kronologi: `logbook.md` di root proyek.
 - Lima gambar kasus kegagalan ECSeg-L disertakan di `reports/own_test_eval/failure_cases_ecseg_l/`.
 
