@@ -1,4 +1,4 @@
-# ComVisInstanceSegmentation
+﻿# ComVisInstanceSegmentation
 
 Segmentasi instance pada lingkungan indoor — tugas besar Computer Vision.
 
@@ -11,6 +11,10 @@ reports/LOGBOOK_HARI_1.md      hari 1: EDA, pemilihan model, hipotesis
 reports/LOGBOOK_HARI_2.md      hari 2: preprocessing, fold, pilot, training, skor
 reports/LOGBOOK_HARI_3.md      hari 3: ECSeg-L 36 epoch + 8 eksperimen
 reports/LOGBOOK_HARI_4.md      hari 4: gate ECSeg-L, batas VRAM, dan keputusan Modal
+reports/LOGBOOK_HARI_5.md      hari 5: debug Mask2Former, YOLO 35 kelas, diagnosis RPN EVA
+local_runs/k35_m_pf0/         run YOLO26m pretrained (checkpoint, log, CSV, args)
+local_runs/k35_m_sf0_c3/      run YOLO26m scratch final (checkpoint, log, CSV, args)
+scripts/train_k35.py          skrip training YOLO 35 kelas
 reports/ecseg_l/               kurva, AP per kelas, ablasi, matriks konfusi, config
 data/processed/categories.json 70 kategori final + flag stuff/things
 splits/folds.json              5-fold stratified (seed 42)
@@ -49,4 +53,3 @@ jupyter lab notebooks/01_eda.ipynb
 `DATASET_DIR` harus berisi `train/`, `valid/`, `test/` beserta JSON COCO-nya.
 Kalau variabel itu tidak diset, notebook mencari folder `train/` ke atas dari
 direktori kerja.
-

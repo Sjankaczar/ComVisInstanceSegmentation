@@ -1,0 +1,7 @@
+power plan: High Performance
+PARAMS 27,112,072 (27.1M) | arm=pretrained
+VAL mask mAP50-95=0.3347 mAP50=0.4783
+kurva: ep1=0.1112 -> ep13=0.2895 -> ep24=0.3225
+SELESAI complete | 20.5 menit | 51.1 s/epoch
+RESULT {"tag": "k35_m_pf0", "cfg": {"tag": "k35_m_pf0", "model": "yolo26m-seg.pt", "arm": "pretrained", "fold": 0, "epochs": 24, "batch": 4, "imgsz": 640, "lr0": 0.0005, "lrf": 0.01, "warmup_epochs": 0.0, "close_mosaic": 3, "optimizer": "AdamW", "cls": 1.0, "copy_paste": 0.3, "workers": 0, "cache": "disk", "seed": 0, "deterministic": true, "nc": 35, "n_things": 24, "n_stuff": 11, "data": "C:\\Users\\Rafli\\Documents\\kodin\\python\\kompis\\Minggu 13\\local_ds\\k35_f0\\data.yaml", "device": "cuda:0"}, "status": "complete", "error": null, "train_seconds": 1227.3, "s_per_epoch": 51.1, "curve": {"1": 0.1112, "2": 0.0473, "3": 0.1073, "4": 0.1426, "5": 0.1664, "6": 0.1914, "7": 0.2042, "8": 0.2387, "9": 0.2598, "10": 0.2579, "11": 0.2738, "12": 0.2868, "13": 0.2895, "14": 0.3045, "15": 0.317, "16": 0.3317, "17": 0.3205, "18": 0.3235, "19": 0.3304, "20": 0.3372, "21": 0.3334, "22": 0.3257, "23": 0.3182, "24": 0.3225}, "val_map50_95_mask": 0.3347, "val_map50_mask": 0.4783, "val_precision": 0.5971, "val_recall": 0.4134, "peak_vram_gb": 5.27}
+power plan: Balanced (dipulihkan)
