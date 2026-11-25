@@ -1,8 +1,11 @@
 ﻿# Laporan Tugas — Segmentasi Instance pada Lingkungan Indoor Nyata
 
 **Mata kuliah:** Computer Vision  
+
 **Nama Lengkap:** Rafli Djanuar Anangsyah
+
 **NRP:** 5054241025
+
 **Dataset latih:** Panoptic Indoor Segmentation v5 (Roboflow Universe)  
 **Status laporan:** draf berbasis artefak yang tersedia per 25 November 2026  
 **Notebook proyek di root repo:** `Training Model.ipynb` · `Evaluasi Model.ipynb`
